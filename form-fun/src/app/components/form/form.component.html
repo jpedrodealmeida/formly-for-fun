@@ -1,0 +1,13 @@
+<form *ngIf="formFields" [formGroup]="formGroup">
+    <div class="grid p-fluid" *ngFor="let field of formFields">
+        <div class="col-12" *ngIf="field.type == 'input'">
+            <span>{{field.label}}</span>
+            <input type="text" pInputText [formControlName]="field.name"> 
+        </div>
+    </div>
+ 
+</form>
+<div class="flex justify-content-end m-1">
+    <p-button label="Cancel" styleClass="p-button-link"></p-button>
+    <p-button label="Login"></p-button>
+</div>
